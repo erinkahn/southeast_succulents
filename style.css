@@ -6,13 +6,28 @@ Version: 1.0
 Author: Vehicle Media
 Author URI: www.vehiclemedia.com.
 */
-#primary-menu {
-  list-style: none;
+.jomo {
+  font-family: 'Jomolhari', serif;
 }
 
-@font-face {
-  font-family: "super";
-  src: url("../assets/fonts/SuperClarendon.ttc") format("truetype");
+.staat {
+  font-family: 'Staatliches', cursive;
+}
+
+.gochi {
+  font-family: 'Gochi Hand', cursive;
+}
+
+.nanum {
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+.federo {
+  font-family: 'Federo', sans-serif;
+}
+
+.averia, .main-navigation a {
+  font-family: 'Averia Serif Libre', cursive;
 }
 
 .white {
@@ -31,8 +46,77 @@ Author URI: www.vehiclemedia.com.
   color: #96cda0;
 }
 
-.super {
-  font-family: "super";
+.powell {
+  font-family: "powell";
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-navigation {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.main-navigation a {
+  font-size: 20px;
+}
+
+.site-logo img {
+  width: 300px;
+}
+
+.jomo {
+  font-family: 'Jomolhari', serif;
+}
+
+.staat {
+  font-family: 'Staatliches', cursive;
+}
+
+.gochi {
+  font-family: 'Gochi Hand', cursive;
+}
+
+.nanum {
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+.federo {
+  font-family: 'Federo', sans-serif;
+}
+
+.averia, .main-navigation a {
+  font-family: 'Averia Serif Libre', cursive;
+}
+
+.white {
+  color: #fff;
+}
+
+.green {
+  color: #b4d2be;
+}
+
+.greentwo {
+  color: #9dbba9;
+}
+
+.greenthree {
+  color: #96cda0;
+}
+
+.powell {
+  font-family: "powell";
 }
 
 .uppercase {

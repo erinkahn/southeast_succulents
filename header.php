@@ -4,6 +4,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre:300,400,700|Federo|Gochi+Hand|Jomolhari|Nanum+Pen+Script|Staatliches&display=swap" rel="stylesheet">
 
 	<?php wp_head(); ?>
 </head>
@@ -14,6 +15,15 @@
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header">
+
+		<nav class="main-navigation left-side">
+			<?php
+			wp_nav_menu( array(	
+				'theme_location' => 'primary'
+			) );
+			?>
+		</nav>
+
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -29,10 +39,10 @@
 			?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
+		<nav class="main-navigation right-side">
 			<?php
 			wp_nav_menu( array(	
-				'menu_id'  => 'primary-menu'
+				'theme_location' => 'secondary'
 			) );
 			?>
 		</nav><!-- #site-navigation -->

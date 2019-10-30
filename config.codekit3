@@ -33,13 +33,24 @@
 		"oAP": "/archive.php",
 		"oF": 0
 		},
-	"/assets/fonts/SuperClarendon.ttc": {
+	"/assets/fonts/powellantique-bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/assets/fonts/SuperClarendon.ttc",
+		"oAP": "/assets/fonts/powellantique-bold.ttf",
 		"oF": 0
+		},
+	"/assets/img/customLogo-1.png": {
+		"ft": 32768,
+		"iS": 31098,
+		"oA": 0,
+		"oAP": "/assets/img/customLogo-1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"/assets/img/favicon.png": {
 		"ft": 32768,

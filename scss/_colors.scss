@@ -7,10 +7,31 @@ $greenthree: #96cda0;
 
 // fonts -------------
 
-@font-face {
-  font-family: "super";
-  src: url("../assets/fonts/SuperClarendon.ttc") format("truetype");
+.jomo{
+    font-family: 'Jomolhari', serif;
 }
+
+.staat{
+    font-family: 'Staatliches', cursive;
+}
+
+.gochi{
+    font-family: 'Gochi Hand', cursive;
+}
+
+.nanum{
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+.federo{
+    font-family: 'Federo', sans-serif;
+}
+
+.averia{
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+
 
 
 // global classes -------------
@@ -31,8 +52,8 @@ $greenthree: #96cda0;
     color:#96cda0;
 }
 
-.super{
-    font-family: "super";
+.powell{
+    font-family: "powell";
 }
 
 .uppercase{

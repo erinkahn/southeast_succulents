@@ -43,9 +43,18 @@ if ( ! function_exists( 'southeast_succulents_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'southeast_succulents' ),
-		) );
+		function register_menu() {
+		add_theme_support('menus');
+
+		register_nav_menus( array(  
+			'primary' => __( 'Primary Navigation' ),  
+			'secondary' => __('Secondary Navigation')  
+			) );
+
+		}
+
+		add_action('init','register_menu');
+		
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments

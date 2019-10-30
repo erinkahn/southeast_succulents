@@ -1,3 +1,15 @@
-#primary-menu{
+
+@import "_colors.scss";
+
+.main-navigation{
     list-style: none;
+    text-transform: uppercase;
+    a{
+        @extend .averia;
+        font-size: 20px;
+    }
+}
+
+.site-logo img{
+    width: 300px;
 }
