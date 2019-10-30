@@ -1,11 +1,12 @@
 
 <?php
 /*
-* Template Name: Contact
+* Template Name: Plant Care
 */
 ?>
 
 <?php get_header();?>
+
 
 
 
@@ -21,7 +22,6 @@ if (have_posts()):
     endwhile;
 endif;
 ?>
-
 
 
 

@@ -6,6 +6,43 @@ Version: 1.0
 Author: Vehicle Media
 Author URI: www.vehiclemedia.com.
 */
-body {
-  background: white;
+#primary-menu {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "super";
+  src: url("../assets/fonts/SuperClarendon.ttc") format("truetype");
+}
+
+.white {
+  color: #fff;
+}
+
+.green {
+  color: #b4d2be;
+}
+
+.greentwo {
+  color: #9dbba9;
+}
+
+.greenthree {
+  color: #96cda0;
+}
+
+.super {
+  font-family: "super";
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
 }

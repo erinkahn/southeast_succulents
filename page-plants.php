@@ -1,7 +1,7 @@
 
 <?php
 /*
-* Template Name: Plants Page
+* Template Name: Plants
 */
 ?>
 
@@ -9,21 +9,18 @@
 
 
 
-
-<h2>Plants</h2>
-
 <?php
 if (have_posts()):
     while (have_posts() ):
         the_post();
-        echo '<li>';
-            echo '<a href="' . get_the_permalink() . '">' . get_the_title() . '</a>';
-            echo ' by ' . '<em>' . get_the_author() . '</em>';
-        echo '</li>';
+        ?>
+        
+        <h2><?php echo the_title();?></h2>
+
+        <?php
     endwhile;
 endif;
 ?>
-
 
 
 

@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "31491",
 "files": {
+	"/.gitattributes": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.gitattributes",
+		"oF": 0
+		},
 	"/404.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -24,6 +32,67 @@
 		"oA": 0,
 		"oAP": "/archive.php",
 		"oF": 0
+		},
+	"/assets/fonts/SuperClarendon.ttc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/fonts/SuperClarendon.ttc",
+		"oF": 0
+		},
+	"/assets/img/favicon.png": {
+		"ft": 32768,
+		"iS": 1914,
+		"oA": 0,
+		"oAP": "/assets/img/favicon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/img/logo.png": {
+		"ft": 32768,
+		"iS": 2592,
+		"oA": 0,
+		"oAP": "/assets/img/logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/img/logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/img/logo2.png": {
+		"ft": 32768,
+		"iS": 14542,
+		"oA": 0,
+		"oAP": "/assets/img/logo2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/img/logo2.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/logo2.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/comments.php": {
 		"cB": 0,
@@ -198,12 +267,36 @@
 		"oAP": "/page-contact.php",
 		"oF": 0
 		},
+	"/page-hypertufa.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-hypertufa.php",
+		"oF": 0
+		},
+	"/page-plantcare.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-plantcare.php",
+		"oF": 0
+		},
 	"/page-plants.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/page-plants.php",
+		"oF": 0
+		},
+	"/page-weddings.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-weddings.php",
 		"oF": 0
 		},
 	"/page.php": {
@@ -270,6 +363,19 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/scss/_breakpoints.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/scss/_breakpoints.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/scss/_colors.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -279,6 +385,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/scss/_colors.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/scss/_footer.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/scss/_footer.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

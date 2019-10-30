@@ -1,3 +1,49 @@
-body{
-    background: lightcoral;
+// colors -------------
+
+$green: #b4d2be;
+$greentwo: #9dbba9;
+$greenthree: #96cda0;
+
+
+// fonts -------------
+
+@font-face {
+  font-family: "super";
+  src: url("../assets/fonts/SuperClarendon.ttc") format("truetype");
 }
+
+
+// global classes -------------
+
+.white{
+    color: #fff;
+}
+
+.green{
+    color:#b4d2be;
+}
+
+.greentwo{
+    color: #9dbba9;
+}
+
+.greenthree{
+    color:#96cda0;
+}
+
+.super{
+    font-family: "super";
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.text-center{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+

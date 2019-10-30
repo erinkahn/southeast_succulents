@@ -1,11 +1,12 @@
 
 <?php
 /*
-* Template Name: Contact
+* Template Name: Weddings + Events
 */
 ?>
 
 <?php get_header();?>
+
 
 
 
@@ -21,7 +22,6 @@ if (have_posts()):
     endwhile;
 endif;
 ?>
-
 
 
 

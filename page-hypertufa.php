@@ -1,7 +1,7 @@
 
 <?php
 /*
-* Template Name: Contact
+* Template Name: Hypertufa
 */
 ?>
 
@@ -21,8 +21,6 @@ if (have_posts()):
     endwhile;
 endif;
 ?>
-
-
 
 
 
