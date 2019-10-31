@@ -29,11 +29,19 @@
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
-				<h1 class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo bloginfo( 'template_directory' ).'/assets/img/logo2.svg'; ?>"></a></h1>
+				<div class="site-logo">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img src="<?php echo bloginfo( 'template_directory' ).'/assets/img/logo2.svg'; ?>">
+					</a>
+			</div>
 				<?php
 			else :
 				?>
-				<h1 class="site-logo two"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo bloginfo( 'template_directory' ).'/assets/img/logo2.svg'; ?>"></a></h1>
+				<h1 class="site-logo two">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img src="<?php echo bloginfo( 'template_directory' ).'/assets/img/logo2.svg'; ?>">
+					</a>
+				</h1>
 				<?php
 			endif;
 			?>
@@ -46,6 +54,20 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
+
+
+		<div class="mobile-menu-btn">
+			<img src="<?php echo bloginfo('template_directory').'/assets/img/mobile-succulent.svg';?>" alt="succulent">
+		</div>
+
 	</header><!-- #masthead -->
+
+	<div class="mobile-nav-list">
+		<?php
+		wp_nav_menu( array(	
+			'theme_location' => 'mobile'
+		) );
+		?>
+	</div>
 
 	<div id="content" class="site-content">

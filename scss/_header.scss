@@ -1,15 +1,151 @@
 
 @import "_colors.scss";
+@import "_breakpoints.scss";
+
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid $green;
+    box-shadow: -2px 2px 9px $green;
+    width: 100%;
+    position: fixed;
+    height: 90px;
+    background: #fff;
+    @include respond-to('medium'){
+        height: 120px;
+    }
+}
 
 .main-navigation{
-    list-style: none;
-    text-transform: uppercase;
-    a{
-        @extend .averia;
-        font-size: 20px;
+    display: none;
+    @include respond-to('large'){
+        display: flex;
+        position: initial;
+        background: transparent;
+        width: auto;
+    }
+    ul{
+        flex-direction: row;
+        list-style: none;
+        text-transform: uppercase;
+        display: flex;
+        li{
+            margin: 0 15px;
+            a{
+                color: $grey;
+                letter-spacing: 0.03em;
+                font-size: 14px;
+                @extend .averia;
+                font-weight: bold;
+                &:hover{
+                    color:$greentwo;
+                }
+            }
+        }
+        
+        @include respond-to('xlarge'){
+            li{
+                margin: 0 20px;
+                a{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+} 
+
+.site-branding{
+    position: absolute;
+    left: 20px;
+    @include respond-to('medium'){
+        left: 30px;
+        padding: 0 10px;
+    }
+    @include respond-to('large'){
+        position: initial;
+        padding: 0 20px;
+    }
+    @include respond-to('xlarge'){
+        padding: 0 30px;
+    }
+    h1{
+        margin-block-end: 0.4em;
     }
 }
 
 .site-logo img{
-    width: 300px;
+    width: 200px;
+    @include respond-to('medium'){
+        width: 220px;
+    }
+    @include respond-to('xlarge'){
+        width: 280px;
+    }
+}
+
+.mobile-menu-btn{
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    img{
+        width: 40px;
+        transition: .2s ease-in-out;  
+    }
+    &:hover{
+        img{
+            transform: rotate(-15deg);
+        }
+    }
+    @include respond-to('medium'){
+        right: 30px;
+        img{
+            width: 50px;
+        }    
+    }
+    @include respond-to('large'){
+        display: none;
+    }
+}
+
+
+.mobile-nav-list{
+    // opacity: 0;
+    position: absolute;
+    background: $greentwo;
+    left: 0;
+    right: 0;
+    top: 138px;
+    @include respond-to('medium'){
+        top: 168px;
+    }
+    @media screen and (min-width: 783px){
+         top: 154px;
+    }
+    @include respond-to('large'){
+        display: none;
+    }
+    ul{
+        padding: 45px 0;
+        list-style: none;
+        text-align: center;
+        li{
+            margin-bottom: 25px;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+            a{
+                color: #fff;
+                font-size: 17px;
+                text-transform: uppercase;
+                letter-spacing: 0.03em;
+                @extend .averia;
+                font-weight: bold;
+                &:hover{
+                    opacity: 0.4;
+                }
+            }
+        }
+    }
 }

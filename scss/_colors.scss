@@ -3,6 +3,7 @@
 $green: #b4d2be;
 $greentwo: #9dbba9;
 $greenthree: #96cda0;
+$grey: rgb(143, 146, 148);
 
 
 // fonts -------------
@@ -35,6 +36,26 @@ $greenthree: #96cda0;
 
 
 // global classes -------------
+
+body{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background:rgba(180, 210, 190, 0.12941176470588237);
+}
+
+ul{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+}
+
+h1{
+    -webkit-margin-after: 0!important;
+    margin-block-end: 0!important;
+    margin-block-start: 0!important;
+}
 
 .white{
     color: #fff;

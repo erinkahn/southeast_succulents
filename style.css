@@ -26,8 +26,33 @@ Author URI: www.vehiclemedia.com.
   font-family: 'Federo', sans-serif;
 }
 
-.averia, .main-navigation a {
+.averia, .main-navigation ul li a, .mobile-nav-list ul li a {
   font-family: 'Averia Serif Libre', cursive;
+}
+
+body {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background: rgba(180, 210, 190, 0.129412);
+}
+
+ul {
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+  -webkit-padding-end: 0px;
+          padding-inline-end: 0px;
+}
+
+h1 {
+  -webkit-margin-after: 0 !important;
+  margin-block-end: 0 !important;
+  -webkit-margin-before: 0 !important;
+          margin-block-start: 0 !important;
 }
 
 .white {
@@ -62,17 +87,203 @@ a {
   text-decoration: none;
 }
 
-.main-navigation {
-  list-style: none;
-  text-transform: uppercase;
+header {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  border-bottom: 2px solid #b4d2be;
+  box-shadow: -2px 2px 9px #b4d2be;
+  width: 100%;
+  position: fixed;
+  height: 90px;
+  background: #fff;
 }
 
-.main-navigation a {
-  font-size: 20px;
+@media (min-width: 768px) {
+  header {
+    height: 120px;
+  }
+}
+
+.main-navigation {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .main-navigation {
+    display: -webkit-box;
+    display: flex;
+    position: initial;
+    background: transparent;
+    width: auto;
+  }
+}
+
+.main-navigation ul {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  list-style: none;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: flex;
+}
+
+.main-navigation ul li {
+  margin: 0 15px;
+}
+
+.main-navigation ul li a {
+  color: #8f9294;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.main-navigation ul li a:hover {
+  color: #9dbba9;
+}
+
+@media (min-width: 1200px) {
+  .main-navigation ul li {
+    margin: 0 20px;
+  }
+  .main-navigation ul li a {
+    font-size: 16px;
+  }
+}
+
+.site-branding {
+  position: absolute;
+  left: 20px;
+}
+
+@media (min-width: 768px) {
+  .site-branding {
+    left: 30px;
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-branding {
+    position: initial;
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-branding {
+    padding: 0 30px;
+  }
+}
+
+.site-branding h1 {
+  -webkit-margin-after: 0.4em;
+          margin-block-end: 0.4em;
 }
 
 .site-logo img {
-  width: 300px;
+  width: 200px;
+}
+
+@media (min-width: 768px) {
+  .site-logo img {
+    width: 220px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-logo img {
+    width: 280px;
+  }
+}
+
+.mobile-menu-btn {
+  position: absolute;
+  cursor: pointer;
+  right: 20px;
+}
+
+.mobile-menu-btn img {
+  width: 40px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.mobile-menu-btn:hover img {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-btn {
+    right: 30px;
+  }
+  .mobile-menu-btn img {
+    width: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+.mobile-nav-list {
+  position: absolute;
+  background: #9dbba9;
+  left: 0;
+  right: 0;
+  top: 138px;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav-list {
+    top: 168px;
+  }
+}
+
+@media screen and (min-width: 783px) {
+  .mobile-nav-list {
+    top: 154px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mobile-nav-list {
+    display: none;
+  }
+}
+
+.mobile-nav-list ul {
+  padding: 45px 0;
+  list-style: none;
+  text-align: center;
+}
+
+.mobile-nav-list ul li {
+  margin-bottom: 25px;
+}
+
+.mobile-nav-list ul li:last-child {
+  margin-bottom: 0px;
+}
+
+.mobile-nav-list ul li a {
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: bold;
+}
+
+.mobile-nav-list ul li a:hover {
+  opacity: 0.4;
 }
 
 .jomo {
@@ -95,8 +306,33 @@ a {
   font-family: 'Federo', sans-serif;
 }
 
-.averia, .main-navigation a {
+.averia, .main-navigation ul li a, .mobile-nav-list ul li a {
   font-family: 'Averia Serif Libre', cursive;
+}
+
+body {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background: rgba(180, 210, 190, 0.129412);
+}
+
+ul {
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+  -webkit-padding-end: 0px;
+          padding-inline-end: 0px;
+}
+
+h1 {
+  -webkit-margin-after: 0 !important;
+  margin-block-end: 0 !important;
+  -webkit-margin-before: 0 !important;
+          margin-block-start: 0 !important;
 }
 
 .white {

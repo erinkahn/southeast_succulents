@@ -48,7 +48,8 @@ if ( ! function_exists( 'southeast_succulents_setup' ) ) :
 
 		register_nav_menus( array(  
 			'primary' => __( 'Primary Navigation' ),  
-			'secondary' => __('Secondary Navigation')  
+			'secondary' => __('Secondary Navigation'),
+			'mobile' => __('Mobile Navigation')  
 			) );
 
 		}
