@@ -1,7 +1,7 @@
 
 <?php
 /*
-* Template Name: Hypertufa
+* Template Name: Plants
 */
 ?>
 
@@ -16,11 +16,12 @@ if (have_posts()):
         ?>
         
         <h2><?php echo the_title();?></h2>
-
+        <?php the_content(); ?>
         <?php
     endwhile;
 endif;
 ?>
+
 
 
 

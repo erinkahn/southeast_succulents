@@ -1,11 +1,12 @@
 
 <?php
 /*
-* Template Name: Plants
+* Template Name: Weddings + Events
 */
 ?>
 
 <?php get_header();?>
+
 
 
 
@@ -16,7 +17,7 @@ if (have_posts()):
         ?>
         
         <h2><?php echo the_title();?></h2>
-
+        <?php the_content(); ?>
         <?php
     endwhile;
 endif;

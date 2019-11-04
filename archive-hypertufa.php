@@ -1,12 +1,11 @@
 
 <?php
 /*
-* Template Name: Weddings + Events
+* Template Name: Hypertufa
 */
 ?>
 
 <?php get_header();?>
-
 
 
 
@@ -17,12 +16,11 @@ if (have_posts()):
         ?>
         
         <h2><?php echo the_title();?></h2>
-
+        <?php the_content(); ?>
         <?php
     endwhile;
 endif;
 ?>
-
 
 
 

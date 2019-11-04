@@ -1,0 +1,1 @@
+<?php header("Location: /weddings-events"); ?> <!-- no single page so stay on wedding events page -->
