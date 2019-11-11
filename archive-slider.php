@@ -1,7 +1,7 @@
 
 <?php
 /*
-* Template Name: Hypertufa
+* Template Name: Slider
 */
 ?>
 
@@ -21,6 +21,7 @@ if (have_posts()):
     endwhile;
 endif;
 ?>
+
 
 
 

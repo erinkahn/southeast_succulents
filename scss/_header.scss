@@ -8,10 +8,11 @@ header{
     justify-content: center;
     align-items: center;
     border-bottom: 2px solid $green;
-    box-shadow: -2px 2px 9px $green;
+    z-index: 99999;
     width: 100%;
     position: fixed;
     height: 90px;
+    top: 0;
     background: #fff;
     @include respond-to('medium'){
         height: 120px;
@@ -111,17 +112,29 @@ header{
 
 
 .mobile-nav-list{
-    // opacity: 0;
+    opacity: 0;
+    height: 0;
+    pointer-events: none;
     position: absolute;
     background: $greentwo;
     left: 0;
     right: 0;
-    top: 138px;
-    @include respond-to('medium'){
-        top: 168px;
-    }
-    @media screen and (min-width: 783px){
-         top: 154px;
+    top: 0;
+    z-index: 999;
+    transition: 2s ease-in-out;
+    &.show{
+        opacity: 1;
+        height: auto;
+        cursor: pointer;
+        top: 92px;
+        left: 0;
+        right: 0;
+        position: absolute;
+        pointer-events: all;
+        transition: 1s ease-in-out;
+        @media screen and (min-width:692px){
+            top: 122px;
+        }
     }
     @include respond-to('large'){
         display: none;

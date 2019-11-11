@@ -10,6 +10,11 @@ if (have_posts()):
         
         <h2><?php echo the_title();?></h2>
         <?php the_content(); ?>
+
+        <?php 
+        echo the_field('price'); 
+        echo the_field('care');
+        ?>
         <?php
     endwhile;
 endif;

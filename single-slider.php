@@ -1,0 +1,1 @@
+<?php header("Location: /"); ?> <!-- no single page so stay on home page -->

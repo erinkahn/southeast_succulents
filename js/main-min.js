@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".mobile-menu-btn").click(function(){$(".mobile-nav-list").toggleClass("show")}),$(".slider-container").slick({infinite:!0,slidesToShow:1,slidesToScroll:1,dots:!0,speed:800,autoplay:!0,autoplaySpeed:3e3,pauseOnHover:!1,cssEase:"cubic-bezier(.42,0,.49,1.02)",useTransform:!0,arrows:!1}),console.log("foo")});

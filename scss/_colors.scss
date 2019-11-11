@@ -4,7 +4,7 @@ $green: #b4d2be;
 $greentwo: #9dbba9;
 $greenthree: #96cda0;
 $grey: rgb(143, 146, 148);
-
+$darkgreen: #819688;
 
 // fonts -------------
 
@@ -89,3 +89,10 @@ a{
     text-decoration: none;
 }
 
+
+.read-more{
+    color: $darkgreen;
+    border-bottom: 2px solid $darkgreen;
+    padding-bottom: 5px;
+    font-size: 20px;
+}

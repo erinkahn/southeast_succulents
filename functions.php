@@ -40,6 +40,9 @@ if ( ! function_exists( 'southeast_succulents_setup' ) ) :
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
+		if ( has_post_thumbnail() ) {
+   		  $featured_image = get_the_post_thumbnail();
+		}
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
@@ -49,7 +52,8 @@ if ( ! function_exists( 'southeast_succulents_setup' ) ) :
 		register_nav_menus( array(  
 			'primary' => __( 'Primary Navigation' ),  
 			'secondary' => __('Secondary Navigation'),
-			'mobile' => __('Mobile Navigation')  
+			'mobile' => __('Mobile Navigation'),
+			 'footer' => __('Footer Navigation') 
 			) );
 
 		}
@@ -130,9 +134,34 @@ add_action( 'after_setup_theme', 'southeast_succulents_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function southeast_succulents_scripts() {
+	
+
+	// JS
+	wp_register_script( 'jQuery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js', null, null, true );
+	wp_enqueue_script('jQuery');
+
+	wp_register_script( 'TweenMax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js', null, null, true );
+
+	wp_enqueue_script('TweenMax');
+
+	wp_register_script( 'Slick', 'https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js', [], '1.9.0', true );
+
+	wp_enqueue_script('Slick');
+	
+	wp_register_script( 'southeast_succulents-javascript', get_template_directory_uri() . '/js/main.js', [], '1.9.0', true ); 
+	
+	wp_enqueue_script('southeast_succulents-javascript');
+	
+
+
+	// CSS
+
+
 	wp_enqueue_style( 'southeast_succulents-style', get_stylesheet_uri(), [], '1.0.0' );
 
-	wp_enqueue_script( 'southeast_succulents-javascript', get_template_directory_uri() . '/js/main.js' ); 
+	wp_enqueue_style( 'slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css', [], '1.9.0' );
+	
+	wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', [], '1.9.0' );
 
 	// wp_enqueue_script( 'southeast_succulents-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -239,19 +268,19 @@ add_action( 'init', 'plants', 0 );
 
 
 // Register Custom Post Type
-function hypertufas() {
+function pots() {
 
 	$labels = array(
-		'name'                  => _x( 'Hypertufas', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'Hypertufa', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Hypertufas', 'text_domain' ),
-		'name_admin_bar'        => __( 'Hypertufas', 'text_domain' ),
+		'name'                  => _x( 'pots', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Pot', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'pots', 'text_domain' ),
+		'name_admin_bar'        => __( 'pots', 'text_domain' ),
 		'archives'              => __( 'Item Archives', 'text_domain' ),
 		'attributes'            => __( 'Item Attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
 		'all_items'             => __( 'All Items', 'text_domain' ),
 		'add_new_item'          => __( 'Add New Item', 'text_domain' ),
-		'add_new'               => __( 'Add New hypertufa', 'text_domain' ),
+		'add_new'               => __( 'Add New Pot', 'text_domain' ),
 		'new_item'              => __( 'New Item', 'text_domain' ),
 		'edit_item'             => __( 'Edit Item', 'text_domain' ),
 		'update_item'           => __( 'Update Item', 'text_domain' ),
@@ -271,14 +300,79 @@ function hypertufas() {
 		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
 	);
 	$rewrite = array(
-		'slug'                  => 'hypertufas',
+		'slug'                  => 'pots',
 		'with_front'            => true,
 		'pages'                 => true,
 		'feeds'                 => true,
 	);
 	$args = array(
-		'label'                 => __( 'Hypertufa', 'text_domain' ),
-		'description'           => __( 'hypertufas', 'text_domain' ),
+		'label'                 => __( 'Pot', 'text_domain' ),
+		'description'           => __( 'pots', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail'), // need this for thumbnail img
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'rewrite'               => $rewrite,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'pots', $args );
+
+}
+add_action( 'init', 'pots', 0 );
+
+
+
+// Register Custom Post Type
+function slider() {
+
+	$labels = array(
+		'name'                  => _x( 'Slider', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Slider', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Slider', 'text_domain' ),
+		'name_admin_bar'        => __( 'Slider', 'text_domain' ),
+		'archives'              => __( 'Item Archives', 'text_domain' ),
+		'attributes'            => __( 'Item Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
+		'all_items'             => __( 'All Items', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Item', 'text_domain' ),
+		'add_new'               => __( 'Add New Slide', 'text_domain' ),
+		'new_item'              => __( 'New Item', 'text_domain' ),
+		'edit_item'             => __( 'Edit Item', 'text_domain' ),
+		'update_item'           => __( 'Update Item', 'text_domain' ),
+		'view_item'             => __( 'View Item', 'text_domain' ),
+		'view_items'            => __( 'View Items', 'text_domain' ),
+		'search_items'          => __( 'Search Item', 'text_domain' ),
+		'not_found'             => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+		'items_list'            => __( 'Items list', 'text_domain' ),
+		'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+	);
+	$rewrite = array(
+		'slug'                  => 'slider',
+		'with_front'            => true,
+		'pages'                 => true,
+		'feeds'                 => true,
+	);
+	$args = array(
+		'label'                 => __( 'slide', 'text_domain' ),
+		'description'           => __( 'slider', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
@@ -296,7 +390,7 @@ function hypertufas() {
 		'rewrite'               => $rewrite,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'hypertufas', $args );
+	register_post_type( 'slider', $args );
 
 }
-add_action( 'init', 'hypertufas', 0 );
+add_action( 'init', 'slider', 0 );
