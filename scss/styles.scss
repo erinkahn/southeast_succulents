@@ -14,6 +14,11 @@ Author URI: www.vehiclemedia.com.
 
 
 
+.post-type-archive,
+.single-pots,
+.page-template-page-plantcare{
+    background: #fff;
+}
 
 // home page 
 #content{
@@ -35,7 +40,7 @@ Author URI: www.vehiclemedia.com.
         background-size: cover;
         background-repeat: no-repeat;
         background-position: right;
-        height: 630px;
+        height: 645px;
 
        span{
             width: 60%;
@@ -109,9 +114,8 @@ Author URI: www.vehiclemedia.com.
     width: 80%;
     display: flex;
     flex-direction: column;
-    margin: 80px auto;
+    margin: 180px auto;
     justify-content: space-between;
-    margin-top: 160px;
     font-family: 'Averia Serif Libre', cursive;
     color: $darkgreen;
     @include respond-to('large'){
@@ -142,14 +146,11 @@ Author URI: www.vehiclemedia.com.
     }
 }
 
-.post-type-archive,
-.single-pots{
-    background: #fff;
-}
 
 .pots-container{
     width: 80%;
     margin: 30px auto;
+    margin-top: 230px;;
     display: flex;
     flex-wrap: wrap;
 
@@ -182,9 +183,20 @@ Author URI: www.vehiclemedia.com.
             bottom: 0;
             background: $green;
             font-family: 'Averia Serif Libre', cursive;
+            h3{
+                font-size: 28px;
+            }
             a{
                 color: #fff;
                 font-family: 'Averia Serif Libre', cursive;
+                border: 1px solid #fff;
+                padding: 10px;
+                width: 55%;
+                margin: 0 auto;
+                &:hover{
+                    background: #fff;
+                    color: $green;
+                }
             }
         }
         &:hover{
@@ -198,7 +210,7 @@ Author URI: www.vehiclemedia.com.
 .single-pot{
     width: 80%;
     margin: 80px auto;
-    margin-top: 140px;
+    margin-top: 230px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -224,5 +236,73 @@ Author URI: www.vehiclemedia.com.
                 width: 400px;
             }
         }
+    }
+}
+
+.single-prev-next{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    a{
+        margin: 0 20px;
+        font-family: 'Averia Serif Libre', cursive;
+        color: $green;
+        border: 2px solid $green;
+        background: #fff;
+        padding: 10px 14px;
+        width: 130px;
+        white-space: nowrap;
+        &:first-child{
+            text-align: right;
+            i{
+                margin-right: 22px;
+            }
+        }
+        &:last-child{
+            i{
+                margin-left: 50px;
+            }
+        }
+
+    }
+}
+
+
+.illustration{
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+    margin-top: 180px;
+    width: 400px;
+    img{
+        width: 100%;
+    }
+}
+
+
+.plant-button-box{
+    display: flex;
+
+    .left{
+        
+    }
+}
+
+
+
+
+.plantcare-container{
+    width: 85%;
+    margin: 140px auto;
+
+    h2{
+        text-transform: uppercase;
+        font-family: 'Averia Serif Libre', cursive;
+        color: $darkgreen;
+    }
+    p{
+        font-family: 'Averia Serif Libre', cursive;
+        margin-bottom: 40px;
+        color: $grey;
     }
 }

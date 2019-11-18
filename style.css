@@ -6,6 +6,10 @@ Version: 1.0
 Author: Vehicle Media
 Author URI: www.vehiclemedia.com.
 */
+@import url(@fortawesome/fontawesome-free/css/fontawesome.css);
+@import url(@fortawesome/fontawesome-free/css/all.css);
+@import url(@fortawesome/fontawesome-free/css/fontawesome.css);
+@import url(@fortawesome/fontawesome-free/css/all.css);
 .jomo {
   font-family: 'Jomolhari', serif;
 }
@@ -313,9 +317,24 @@ footer {
   width: 100%;
   padding: 40px 0;
   margin: 0 auto;
-  -webkit-box-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
   background: #9dbba9;
+}
+
+@media (min-width: 768px) {
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 footer nav {
@@ -345,24 +364,41 @@ footer nav ul li a:hover {
 footer .left-side {
   display: -webkit-box;
   display: flex;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  footer .left-side {
+    margin-bottom: 0px;
+    margin-left: 4%;
+  }
 }
 
 footer .social-icons {
-  width: 10%;
   display: -webkit-box;
   display: flex;
 }
 
 footer .social-icons i {
   color: #fff;
+  font-size: 24px;
+}
+
+footer .social-icons a:nth-child(2) i {
+  margin: 0 8px;
 }
 
 footer .address-info {
+  margin-right: 4%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
   display: -webkit-box;
   display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 footer .address-info a {
@@ -373,6 +409,15 @@ footer .address-info a {
 
 footer .address-info a:hover {
   opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  footer .address-info {
+    -webkit-box-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+            align-items: flex-end;
+  }
 }
 
 .jomo {
@@ -463,6 +508,12 @@ a {
   font-size: 20px;
 }
 
+.post-type-archive,
+.single-pots,
+.page-template-page-plantcare {
+  background: #fff;
+}
+
 #content {
   margin-top: 27px;
 }
@@ -483,7 +534,7 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
-  height: 630px;
+  height: 645px;
 }
 
 .slider-container .slider span {
@@ -565,10 +616,9 @@ a {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  margin: 80px auto;
+  margin: 180px auto;
   -webkit-box-pack: justify;
           justify-content: space-between;
-  margin-top: 160px;
   font-family: 'Averia Serif Libre', cursive;
   color: #819688;
 }
@@ -612,14 +662,10 @@ a {
   line-height: 2em;
 }
 
-.post-type-archive,
-.single-pots {
-  background: #fff;
-}
-
 .pots-container {
   width: 80%;
   margin: 30px auto;
+  margin-top: 230px;
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
@@ -668,9 +714,22 @@ a {
   font-family: 'Averia Serif Libre', cursive;
 }
 
+.pots-container .pot span h3 {
+  font-size: 28px;
+}
+
 .pots-container .pot span a {
   color: #fff;
   font-family: 'Averia Serif Libre', cursive;
+  border: 1px solid #fff;
+  padding: 10px;
+  width: 55%;
+  margin: 0 auto;
+}
+
+.pots-container .pot span a:hover {
+  background: #fff;
+  color: #b4d2be;
 }
 
 .pots-container .pot:hover span {
@@ -680,7 +739,7 @@ a {
 .single-pot {
   width: 80%;
   margin: 80px auto;
-  margin-top: 140px;
+  margin-top: 230px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -723,4 +782,71 @@ a {
     height: 400px;
     width: 400px;
   }
+}
+
+.single-prev-next {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+.single-prev-next a {
+  margin: 0 20px;
+  font-family: 'Averia Serif Libre', cursive;
+  color: #b4d2be;
+  border: 2px solid #b4d2be;
+  background: #fff;
+  padding: 10px 14px;
+  width: 130px;
+  white-space: nowrap;
+}
+
+.single-prev-next a:first-child {
+  text-align: right;
+}
+
+.single-prev-next a:first-child i {
+  margin-right: 22px;
+}
+
+.single-prev-next a:last-child i {
+  margin-left: 50px;
+}
+
+.illustration {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin: 0px auto;
+  margin-top: 180px;
+  width: 400px;
+}
+
+.illustration img {
+  width: 100%;
+}
+
+.plant-button-box {
+  display: -webkit-box;
+  display: flex;
+}
+
+.plantcare-container {
+  width: 85%;
+  margin: 140px auto;
+}
+
+.plantcare-container h2 {
+  text-transform: uppercase;
+  font-family: 'Averia Serif Libre', cursive;
+  color: #819688;
+}
+
+.plantcare-container p {
+  font-family: 'Averia Serif Libre', cursive;
+  margin-bottom: 40px;
+  color: #8f9294;
 }

@@ -161,7 +161,7 @@ function southeast_succulents_scripts() {
 
 	wp_enqueue_style( 'slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css', [], '1.9.0' );
 	
-	wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', [], '1.9.0' );
+	// wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', [], '1.9.0' );
 
 	// wp_enqueue_script( 'southeast_succulents-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -271,10 +271,10 @@ add_action( 'init', 'plants', 0 );
 function pots() {
 
 	$labels = array(
-		'name'                  => _x( 'pots', 'Post Type General Name', 'text_domain' ),
+		'name'                  => _x( 'Pots', 'Post Type General Name', 'text_domain' ),
 		'singular_name'         => _x( 'Pot', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'pots', 'text_domain' ),
-		'name_admin_bar'        => __( 'pots', 'text_domain' ),
+		'menu_name'             => __( 'Pots', 'text_domain' ),
+		'name_admin_bar'        => __( 'Pots', 'text_domain' ),
 		'archives'              => __( 'Item Archives', 'text_domain' ),
 		'attributes'            => __( 'Item Attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
@@ -307,7 +307,7 @@ function pots() {
 	);
 	$args = array(
 		'label'                 => __( 'Pot', 'text_domain' ),
-		'description'           => __( 'pots', 'text_domain' ),
+		'description'           => __( 'Pots', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail'), // need this for thumbnail img
 		'taxonomies'            => array( 'category', 'post_tag' ),
@@ -394,3 +394,43 @@ function slider() {
 
 }
 add_action( 'init', 'slider', 0 );
+
+
+// Register Custom Taxonomy for indoor and outdoor plant locations
+function custom_taxonomy() {
+
+	$labels = array(
+		'name'                       => _x( 'Plant Locations', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Plant Location', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Plant Locations', 'text_domain' ),
+		'all_items'                  => __( 'Plant Locations', 'text_domain' ),
+		'parent_item'                => __( 'Parent Item', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
+		'new_item_name'              => __( 'New Item Name', 'text_domain' ),
+		'add_new_item'               => __( 'Add New Item', 'text_domain' ),
+		'edit_item'                  => __( 'Edit Item', 'text_domain' ),
+		'update_item'                => __( 'Update Item', 'text_domain' ),
+		'view_item'                  => __( 'View Item', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'popular_items'              => __( 'Popular Items', 'text_domain' ),
+		'search_items'               => __( 'Search Items', 'text_domain' ),
+		'not_found'                  => __( 'Not Found', 'text_domain' ),
+		'no_terms'                   => __( 'No items', 'text_domain' ),
+		'items_list'                 => __( 'Items list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => false,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'locations', array( 'plants' ), $args );
+
+}
+add_action( 'init', 'custom_taxonomy', 0 );

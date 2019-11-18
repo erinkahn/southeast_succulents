@@ -36,7 +36,9 @@
 </div>
 
 
-
+<div class="illustration">
+    <img src="<?php echo bloginfo('template_directory').'/assets/img/icons.svg'; ?>">
+</div>
 
 <?php
 if (have_posts()):
@@ -51,9 +53,8 @@ if (have_posts()):
     </div>
     
     <div>
-        <h1>About Us</h1>
+        <h1>About</h1>
         <p><?php the_content();?></p>
-        <a class="read-more" href="">Read More</a>
     </div>
     
 </div>

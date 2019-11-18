@@ -115,6 +115,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/icons.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icons.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/img/logo.png": {
 		"ft": 32768,
 		"iS": 2592,
@@ -574,6 +584,14 @@
 		"oAP": "/style-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"/taxonomy-locations.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taxonomy-locations.php",
+		"oF": 0
 		},
 	"/template-parts/content-none.php": {
 		"cB": 0,
