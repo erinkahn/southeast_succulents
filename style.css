@@ -832,6 +832,74 @@ a {
 .plant-button-box {
   display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  .plant-button-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+  }
+}
+
+.plant-button-box .plant_location_link {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  border: 30px solid white;
+  background-color: #808080ab;
+  background-blend-mode: multiply;
+}
+
+@media (min-width: 992px) {
+  .plant-button-box .plant_location_link {
+    height: 78vh;
+    width: 50%;
+    background-color: transparent;
+    background-blend-mode: initial;
+  }
+}
+
+.plant-button-box .plant_location_link:first-child {
+  background-image: url("assets/img/indoor.jpg");
+  border-top: 50px solid white;
+}
+
+@media (min-width: 992px) {
+  .plant-button-box .plant_location_link:first-child {
+    border-right: 15px solid white;
+    border-top: 30px solid white;
+  }
+}
+
+.plant-button-box .plant_location_link:last-child {
+  background-image: url("assets/img/outdoor.jpg");
+  border-top: none;
+}
+
+@media (min-width: 992px) {
+  .plant-button-box .plant_location_link:last-child {
+    border-left: 15px solid white;
+    border-top: 30px solid white;
+  }
+}
+
+.plant-button-box .plant_location_link:hover {
+  background-color: #808080ab;
+  background-blend-mode: multiply;
+}
+
+.plant-button-box h2 {
+  text-transform: uppercase;
+  font-family: 'Averia Serif Libre', cursive;
+  color: white;
+  margin-left: 20px;
 }
 
 .plantcare-container {

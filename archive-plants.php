@@ -9,27 +9,39 @@
 
 
 <div class="plant-button-box">
+    <?php
+        $locations = get_terms( array(
+            'taxonomy'   => 'locations',
+            'orderby'    => 'count',
+            'hide_empty' => false,
+            'fields'     => 'all'
+        ) );
+    ?>
 
-    <!-- indoor plants - link to indoor archive page -->
-    <div class="left">
-        <a href="http://localhost/circus-wp-class/wordpress_week4/indoor-plants/" class="indoor">
-            Indoor Houseplant Succulents
-        </a>
-    </div>
-    
+    <?php
+        foreach( $locations as $location ) {
+        $args = array(
+            'post_type' => 'plants',
+            'locations' => $location->slug
+        );
+        $location_link = get_term_link( $location );
+        $locationsQ = new WP_Query( $args );
 
-    <!-- outdoor plants - link to outdoor archive page -->
-    <div class="right">
-        <a href="http://localhost/circus-wp-class/wordpress_week4/outdoor-plants/" class="outdoor">
-            Outdoor Cold-Hardy Succulents
-        </a>
-    </div>
-    
-
+        if ($locationsQ->have_posts() ) :
+            while ( $locationsQ->have_posts() ) : $locationsQ->the_post(); ?>
+            <a class="plant_location_link" href="<?php echo $location_link; ?>">
+                <div class="location_img">
+                    <div class="locations-title">
+                        <h2>
+                            <?php echo $location->name; ?> <br> Plants
+                        </h2>
+                    </div>
+                </div>
+            </a>
+         <?php endwhile;
+        wp_reset_postdata();
+     endif; }?>
 </div>
-
-
-
 
 
 <?php get_footer();?>

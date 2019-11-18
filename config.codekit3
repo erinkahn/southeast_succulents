@@ -125,6 +125,17 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/img/indoor.jpg": {
+		"ft": 16384,
+		"iS": 1854038,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/indoor.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/assets/img/logo.png": {
 		"ft": 32768,
 		"iS": 2592,
@@ -176,6 +187,17 @@
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
+		},
+	"/assets/img/outdoor.jpg": {
+		"ft": 16384,
+		"iS": 249417,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/outdoor.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"/assets/img/white-logo.svg": {
 		"ft": 2097152,
