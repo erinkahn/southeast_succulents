@@ -8,7 +8,7 @@
             the_post();
             ?>
             <div class="pot-img">
-                <img src="<?php the_post_thumbnail();?>">
+                <?php the_post_thumbnail();?>
             </div>
             <div class="pot-description">
                 <h2><?php echo the_title();?></h2>

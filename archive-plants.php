@@ -12,24 +12,16 @@
     <?php
         $locations = get_terms( array(
             'taxonomy'   => 'locations',
-            'orderby'    => 'count',
-            'hide_empty' => false,
-            'fields'     => 'all'
+            // 'orderby'    => 'count',
+            // 'hide_empty' => false,
+            // 'fields'     => 'all'
         ) );
+        // var_dump($locations);
     ?>
 
     <?php
-        foreach( $locations as $location ) {
-        $args = array(
-            'post_type' => 'plants',
-            'locations' => $location->slug
-        );
-        $location_link = get_term_link( $location );
-        $locationsQ = new WP_Query( $args );
-
-        if ($locationsQ->have_posts() ) :
-            while ( $locationsQ->have_posts() ) : $locationsQ->the_post(); ?>
-            <a class="plant_location_link" href="<?php echo $location_link; ?>">
+        foreach( $locations as $location ) { ?>
+            <a class="plant_location_link" href="<?php echo get_term_link($location); ?>">
                 <div class="location_img">
                     <div class="locations-title">
                         <h2>
@@ -38,9 +30,29 @@
                     </div>
                 </div>
             </a>
-         <?php endwhile;
-        wp_reset_postdata();
-     endif; }?>
+        <?php }
+    ?>
+</div>
+
+
+<div class="all-plants">
+    <h2>All Plants</h2>
+    <ul>
+    <?php
+    if (have_posts()):
+        while (have_posts() ):
+            the_post();
+            ?>
+            <li>
+                <a href="<?php echo get_permalink();?>">
+                    <?php echo the_post_thumbnail();?>
+                </a>
+            </li>
+            <?php
+        endwhile;
+    endif;
+    ?>
+    </ul>
 </div>
 
 

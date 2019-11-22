@@ -510,7 +510,8 @@ a {
 
 .post-type-archive,
 .single-pots,
-.page-template-page-plantcare {
+.page-template-page-plantcare,
+.single-plants {
   background: #fff;
 }
 
@@ -665,7 +666,7 @@ a {
 .pots-container {
   width: 80%;
   margin: 30px auto;
-  margin-top: 230px;
+  margin-top: 130px;
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
@@ -736,10 +737,9 @@ a {
   opacity: 1;
 }
 
-.single-pot {
+.single-pot, .single-plant {
   width: 80%;
-  margin: 80px auto;
-  margin-top: 230px;
+  margin: 43px auto;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -750,36 +750,40 @@ a {
 }
 
 @media (min-width: 992px) {
-  .single-pot {
+  .single-pot, .single-plant {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
     width: 80%;
     max-width: 900px;
+    padding: 30px;
+    margin: 80px auto;
+    margin-top: 230px;
+    border: 1px solid #8f9294;
   }
 }
 
-.single-pot .pot-description {
-  margin-left: 30px;
+.single-pot .pot-description, .single-pot .plant-description, .single-plant .pot-description, .single-plant .plant-description {
   font-family: 'Averia Serif Libre', cursive;
   color: #8f9294;
   line-height: 2em;
 }
 
-.single-pot .pot-img {
-  width: 100%;
+@media (min-width: 992px) {
+  .single-pot .pot-description, .single-pot .plant-description, .single-plant .pot-description, .single-plant .plant-description {
+    margin-left: 30px;
+  }
 }
 
-.single-pot .pot-img img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.single-pot .pot-img img, .single-pot .plant-img img, .single-plant .pot-img img, .single-plant .plant-img img {
+  width: auto;
+  height: 300px;
   height: 300px;
 }
 
 @media (min-width: 992px) {
-  .single-pot .pot-img img {
-    height: 400px;
+  .single-pot .pot-img img, .single-pot .plant-img img, .single-plant .pot-img img, .single-plant .plant-img img {
+    height: auto;
     width: 400px;
   }
 }
@@ -855,11 +859,13 @@ a {
   border: 30px solid white;
   background-color: #808080ab;
   background-blend-mode: multiply;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 @media (min-width: 992px) {
   .plant-button-box .plant_location_link {
-    height: 78vh;
+    height: 65vh;
     width: 50%;
     background-color: transparent;
     background-blend-mode: initial;
@@ -893,6 +899,8 @@ a {
 .plant-button-box .plant_location_link:hover {
   background-color: #808080ab;
   background-blend-mode: multiply;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .plant-button-box h2 {
@@ -900,6 +908,65 @@ a {
   font-family: 'Averia Serif Libre', cursive;
   color: white;
   margin-left: 20px;
+}
+
+.all-plants {
+  width: 70%;
+  margin: 40px auto;
+}
+
+.all-plants ul {
+  display: -webkit-box;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.all-plants ul li {
+  width: 30.333%;
+  margin: 10px;
+}
+
+.all-plants ul li a {
+  overflow: hidden;
+  display: block;
+}
+
+.all-plants ul li a img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.all-plants ul li a img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.all-plants h2 {
+  text-align: center;
+  font-family: 'Averia Serif Libre', cursive;
+  text-transform: uppercase;
+  color: #b4d2be;
+}
+
+@media screen and (max-width: 991px) {
+  .single-plant {
+    margin-top: 120px;
+  }
+  .single-plant .plant-img {
+    width: 100%;
+  }
+  .single-plant .plant-img img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 .plantcare-container {

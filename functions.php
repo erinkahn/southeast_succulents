@@ -243,8 +243,8 @@ function plants() {
 		'label'                 => __( 'Plant', 'text_domain' ),
 		'description'           => __( 'plants', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'taxonomies'            => array(),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -310,7 +310,7 @@ function pots() {
 		'description'           => __( 'Pots', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail'), // need this for thumbnail img
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'taxonomies'            => array(),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -375,7 +375,7 @@ function slider() {
 		'description'           => __( 'slider', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'taxonomies'            => array( ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -421,16 +421,37 @@ function custom_taxonomy() {
 		'items_list'                 => __( 'Items list', 'text_domain' ),
 		'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
 	);
+	$rewrite = array(
+		'slug'                       => 'exposure',
+		'with_front'                 => true,
+		'hierarchical'               => false,
+	);
 	$args = array(
 		'labels'                     => $labels,
-		'hierarchical'               => false,
+		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
+		'rewrite'                    => $rewrite,
 	);
 	register_taxonomy( 'locations', array( 'plants' ), $args );
 
 }
 add_action( 'init', 'custom_taxonomy', 0 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
