@@ -185,7 +185,7 @@ Author URI: www.vehiclemedia.com.
     }
 }
 
-.single-pot, .single-plant{
+.single-pot, .single-plant, .single-garden{
     width: 80%;
     margin: 43px auto;
     display: flex;
@@ -200,7 +200,7 @@ Author URI: www.vehiclemedia.com.
         margin-top: 175px;
         border: 1px solid $grey;
     }
-    .pot-description, .plant-description{  
+    .pot-description, .plant-description, .garden-description{  
         font-family: 'Averia Serif Libre', cursive;
         color: $grey;
         line-height: 2em;
@@ -208,7 +208,7 @@ Author URI: www.vehiclemedia.com.
             margin-left: 30px;
         }
     }
-    .pot-img, .plant-img{
+    .pot-img, .plant-img, .garden-img{
         img{
             width: auto;
             height: 300px;
@@ -362,15 +362,23 @@ Author URI: www.vehiclemedia.com.
 
 @media screen and (max-width:991px){
     .single-plant{
-    margin-top: 120px;
-    .plant-img{
-        width: 100%;
-        img{
+        margin-top: 120px;
+        .plant-img{
             width: 100%;
-            object-fit: cover;
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
         }
     }
 }
+
+
+.all-gardens ul li a img{
+    transform: scale(0.8);
+    &:hover{
+       transform: scale(1);
+    }
 }
 
 

@@ -720,7 +720,7 @@ a {
           transform: scale(1.1);
 }
 
-.single-pot, .single-plant {
+.single-pot, .single-plant, .single-garden {
   width: 80%;
   margin: 43px auto;
   display: -webkit-box;
@@ -733,7 +733,7 @@ a {
 }
 
 @media (min-width: 992px) {
-  .single-pot, .single-plant {
+  .single-pot, .single-plant, .single-garden {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
@@ -746,26 +746,26 @@ a {
   }
 }
 
-.single-pot .pot-description, .single-pot .plant-description, .single-plant .pot-description, .single-plant .plant-description {
+.single-pot .pot-description, .single-pot .plant-description, .single-pot .garden-description, .single-plant .pot-description, .single-plant .plant-description, .single-plant .garden-description, .single-garden .pot-description, .single-garden .plant-description, .single-garden .garden-description {
   font-family: 'Averia Serif Libre', cursive;
   color: #8f9294;
   line-height: 2em;
 }
 
 @media (min-width: 992px) {
-  .single-pot .pot-description, .single-pot .plant-description, .single-plant .pot-description, .single-plant .plant-description {
+  .single-pot .pot-description, .single-pot .plant-description, .single-pot .garden-description, .single-plant .pot-description, .single-plant .plant-description, .single-plant .garden-description, .single-garden .pot-description, .single-garden .plant-description, .single-garden .garden-description {
     margin-left: 30px;
   }
 }
 
-.single-pot .pot-img img, .single-pot .plant-img img, .single-plant .pot-img img, .single-plant .plant-img img {
+.single-pot .pot-img img, .single-pot .plant-img img, .single-pot .garden-img img, .single-plant .pot-img img, .single-plant .plant-img img, .single-plant .garden-img img, .single-garden .pot-img img, .single-garden .plant-img img, .single-garden .garden-img img {
   width: auto;
   height: 300px;
   height: 300px;
 }
 
 @media (min-width: 992px) {
-  .single-pot .pot-img img, .single-pot .plant-img img, .single-plant .pot-img img, .single-plant .plant-img img {
+  .single-pot .pot-img img, .single-pot .plant-img img, .single-pot .garden-img img, .single-plant .pot-img img, .single-plant .plant-img img, .single-plant .garden-img img, .single-garden .pot-img img, .single-garden .plant-img img, .single-garden .garden-img img {
     height: auto;
     width: 400px;
   }
@@ -960,6 +960,16 @@ a {
     -o-object-fit: cover;
        object-fit: cover;
   }
+}
+
+.all-gardens ul li a img {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.all-gardens ul li a img:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .plantcare-container {
