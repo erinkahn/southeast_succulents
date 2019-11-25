@@ -15,6 +15,9 @@
                 <?php echo the_content(); ?>
                 <p><b>Price: </b>$<?php echo the_field('pot_price');?></p>
                 <p><b>Size:</b> <?php echo the_field('pot_size');?></p>
+                
+                <?php $terms = get_the_terms($post->ID, 'locations');foreach($terms as $term){echo 'Location: ' . $term->name;} ?>
+
             </div>
             
             <?php

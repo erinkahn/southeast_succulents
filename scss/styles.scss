@@ -220,7 +220,7 @@ Author URI: www.vehiclemedia.com.
         max-width: 900px;
         padding: 30px;
         margin: 80px auto;
-        margin-top: 230px;
+        margin-top: 175px;
         border: 1px solid $grey;
     }
     .pot-description, .plant-description{  
@@ -287,6 +287,8 @@ Author URI: www.vehiclemedia.com.
 
 .plant-button-box{
     display: flex;
+    width: 80%;
+    margin: 0 auto;
     flex-direction: column;
     justify-content: space-between;
     @include respond-to('large'){
@@ -389,17 +391,109 @@ Author URI: www.vehiclemedia.com.
 
 
 .plantcare-container{
-    width: 85%;
-    margin: 140px auto;
+    width: 75%;
+    margin: 0px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 900px;
 
-    h2{
-        text-transform: uppercase;
-        font-family: 'Averia Serif Libre', cursive;
-        color: $darkgreen;
+    h1{
+        padding-top: 80px;
     }
     p{
         font-family: 'Averia Serif Libre', cursive;
         margin-bottom: 40px;
         color: $grey;
+        line-height: 1.9em;
+    }
+}
+
+
+.locations-page-container{
+    h1{
+        padding: 80px 0;
+    }
+
+    ul{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 90px;
+        flex-wrap: wrap;
+        li{
+            list-style: none;
+            width: 25%;
+            margin: 17px;
+            a{
+                position: relative;
+                title{
+                    display: none;
+                }
+                img{
+                    width: 100%;
+                    height: auto;
+                    transition: .3s ease;
+                }
+                &:hover{
+                    title{
+                        display: flex;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                    img{
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.weddings-events{
+    h1{
+        padding: 80px 0;
+    }
+
+    p{font-size: 17px;
+    width: 70%;
+    margin: 0 auto;}
+
+    .event-pic{
+        ul{
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 90px;
+            flex-wrap: wrap;
+            li{
+                
+                list-style: none;
+                width: 100%;
+                margin: 17px;
+                @include respond-to('medium'){
+                    width: 25%;
+                }
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+
+
+.contact-page{
+    h1{
+        padding: 80px 0;
     }
 }

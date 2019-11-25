@@ -758,7 +758,7 @@ a {
     max-width: 900px;
     padding: 30px;
     margin: 80px auto;
-    margin-top: 230px;
+    margin-top: 175px;
     border: 1px solid #8f9294;
   }
 }
@@ -836,6 +836,8 @@ a {
 .plant-button-box {
   display: -webkit-box;
   display: flex;
+  width: 80%;
+  margin: 0 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
@@ -970,18 +972,118 @@ a {
 }
 
 .plantcare-container {
-  width: 85%;
-  margin: 140px auto;
+  width: 75%;
+  margin: 0px auto;
+  text-align: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  max-width: 900px;
 }
 
-.plantcare-container h2 {
-  text-transform: uppercase;
-  font-family: 'Averia Serif Libre', cursive;
-  color: #819688;
+.plantcare-container h1 {
+  padding-top: 80px;
 }
 
 .plantcare-container p {
   font-family: 'Averia Serif Libre', cursive;
   margin-bottom: 40px;
   color: #8f9294;
+  line-height: 1.9em;
+}
+
+.locations-page-container h1 {
+  padding: 80px 0;
+}
+
+.locations-page-container ul {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 90px;
+  flex-wrap: wrap;
+}
+
+.locations-page-container ul li {
+  list-style: none;
+  width: 25%;
+  margin: 17px;
+}
+
+.locations-page-container ul li a {
+  position: relative;
+}
+
+.locations-page-container ul li a title {
+  display: none;
+}
+
+.locations-page-container ul li a img {
+  width: 100%;
+  height: auto;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.locations-page-container ul li a:hover title {
+  display: -webkit-box;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.locations-page-container ul li a:hover img {
+  border-radius: 20px;
+}
+
+.weddings-events h1 {
+  padding: 80px 0;
+}
+
+.weddings-events p {
+  font-size: 17px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.weddings-events .event-pic ul {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 90px;
+  flex-wrap: wrap;
+}
+
+.weddings-events .event-pic ul li {
+  list-style: none;
+  width: 100%;
+  margin: 17px;
+}
+
+@media (min-width: 768px) {
+  .weddings-events .event-pic ul li {
+    width: 25%;
+  }
+}
+
+.weddings-events .event-pic ul li img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-page h1 {
+  padding: 80px 0;
 }

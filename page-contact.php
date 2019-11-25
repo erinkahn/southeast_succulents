@@ -8,22 +8,23 @@
 <?php get_header();?>
 
 
+<div class="contact-page">
 
-<?php
-if (have_posts()):
-    while (have_posts() ):
-        the_post();
-        ?>
-        
-        <h2><?php echo the_title();?></h2>
-
-        <?php
-    endwhile;
-endif;
-?>
+    <?php
+    if (have_posts()):
+        while (have_posts() ):
+            the_post();
+            ?>
+            
+            <h1 class="text-center uppercase greentwo averia"><?php echo the_title();?></h1>
 
 
+            <?php
+        endwhile;
+    endif;
+    ?>
 
+</div>
 
 
 

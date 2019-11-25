@@ -10,7 +10,7 @@
 
 <div class="locations-page-container">
 
-    <h1>All <?php echo single_cat_title();?>  Plants</h1>
+    <h1 class="text-center greentwo uppercase averia">All <?php echo single_cat_title();?>  Plants</h1>
 
     <ul>
     <?php
@@ -19,17 +19,16 @@
             the_post();
             ?>
             <li>
-                <h3>
-                    <a href="<?php echo get_permalink();?>">
-                        <?php echo the_title();?>
-                    </a>
-                </h3>
-                <?php echo the_excerpt(); ?>
+                <a href="<?php echo get_permalink();?>">
+                    <?php echo the_post_thumbnail();?>
+                    <div class="text-center averia greentwo"><?php echo the_title();?></div>
+                </a>
             </li>
             <?php
         endwhile;
     endif;
     ?>
+    
     </ul>
 
 

@@ -12,11 +12,7 @@
     <?php
         $locations = get_terms( array(
             'taxonomy'   => 'locations',
-            // 'orderby'    => 'count',
-            // 'hide_empty' => false,
-            // 'fields'     => 'all'
         ) );
-        // var_dump($locations);
     ?>
 
     <?php
