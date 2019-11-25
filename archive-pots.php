@@ -15,14 +15,11 @@
    if (have_posts()) {
         while (have_posts()){
         the_post();            
-        $url = wp_get_attachment_url( get_post_thumbnail_id() );
-        echo '<div class="pot" style="background-image:url(' . $url . ')">';?>
-            <span>
-                <h3><b><?php the_title(); ?></b></h3>
-                <a href="<?php echo get_permalink(); ?>">VIEW PRODUCT</a>
-            </span>
-        <?php echo '</div>';
-         wp_reset_query();
+        $url = wp_get_attachment_url( get_post_thumbnail_id() );?>
+        <a href="<?php echo get_permalink(); ?>">
+            <img src="<?php echo $url;?>" alt="">
+        </a>
+        <?php wp_reset_query();
         }
     }
 

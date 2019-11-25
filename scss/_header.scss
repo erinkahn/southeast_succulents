@@ -57,6 +57,11 @@ header{
     }
 } 
 
+
+header .current-menu-item a{
+    color: $greentwo!important;
+}
+
 .site-branding{
     position: absolute;
     left: 20px;
