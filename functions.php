@@ -442,11 +442,11 @@ function custom_taxonomy() {
 add_action( 'init', 'custom_taxonomy', 0 );
 
 
-add_action('init', 'custom_taxonomy_flush_rewrite');
-function custom_taxonomy_flush_rewrite() {
-    global $wp_rewrite;
-    $wp_rewrite->flush_rules();
-}
+// add_action('init', 'custom_taxonomy_flush_rewrite');
+// function custom_taxonomy_flush_rewrite() {
+//     global $wp_rewrite;
+//     $wp_rewrite->flush_rules();
+// }
 
 
 

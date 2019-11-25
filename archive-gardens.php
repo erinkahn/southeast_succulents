@@ -22,7 +22,7 @@
                 <div class="type_garden">
                     <div class="title_garden">
                         <h2>
-                            <?php echo $garden->name; ?> Gardens
+                            <?php echo $garden->name; ?> <br> Gardens
                         </h2>
                     </div>
                 </div>

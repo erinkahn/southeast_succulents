@@ -17,7 +17,8 @@ Author URI: www.vehiclemedia.com.
 .post-type-archive,
 .single-pots,
 .page-template-page-plantcare,
-.single-plants{
+.single-plants, 
+.single-gardens{
     background: #fff;
 }
 
@@ -323,7 +324,7 @@ Author URI: www.vehiclemedia.com.
     }
 }
 
-.all-plants{
+.all-plants, .all-gardens{
     width: 70%;
     margin: 40px auto;
     
@@ -481,6 +482,13 @@ Author URI: www.vehiclemedia.com.
                 }
             }
         }
+    }
+}
+
+
+.garden-types-page-container{
+    h1{
+        padding: 80px 0;
     }
 }
 
