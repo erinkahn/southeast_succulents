@@ -815,7 +815,7 @@ a {
   width: 100%;
 }
 
-.plant-button-box {
+.plant-button-box, .garden-types {
   display: -webkit-box;
   display: flex;
   width: 80%;
@@ -828,14 +828,14 @@ a {
 }
 
 @media (min-width: 992px) {
-  .plant-button-box {
+  .plant-button-box, .garden-types {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
   }
 }
 
-.plant-button-box .plant_location_link {
+.plant-button-box .plant_location_link, .plant-button-box .garden_type_link, .garden-types .plant_location_link, .garden-types .garden_type_link {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -848,7 +848,7 @@ a {
 }
 
 @media (min-width: 992px) {
-  .plant-button-box .plant_location_link {
+  .plant-button-box .plant_location_link, .plant-button-box .garden_type_link, .garden-types .plant_location_link, .garden-types .garden_type_link {
     height: 65vh;
     width: 50%;
     background-color: transparent;
@@ -856,38 +856,46 @@ a {
   }
 }
 
-.plant-button-box .plant_location_link:first-child {
+.plant-button-box .plant_location_link:first-child, .plant-button-box .garden_type_link:first-child, .garden-types .plant_location_link:first-child, .garden-types .garden_type_link:first-child {
   background-image: url("assets/img/indoor.jpg");
   border-top: 50px solid white;
 }
 
 @media (min-width: 992px) {
-  .plant-button-box .plant_location_link:first-child {
+  .plant-button-box .plant_location_link:first-child, .plant-button-box .garden_type_link:first-child, .garden-types .plant_location_link:first-child, .garden-types .garden_type_link:first-child {
     border-right: 15px solid white;
     border-top: 30px solid white;
   }
 }
 
-.plant-button-box .plant_location_link:last-child {
+.plant-button-box .plant_location_link:last-child, .plant-button-box .garden_type_link:last-child, .garden-types .plant_location_link:last-child, .garden-types .garden_type_link:last-child {
   background-image: url("assets/img/outdoor.jpg");
   border-top: none;
 }
 
 @media (min-width: 992px) {
-  .plant-button-box .plant_location_link:last-child {
+  .plant-button-box .plant_location_link:last-child, .plant-button-box .garden_type_link:last-child, .garden-types .plant_location_link:last-child, .garden-types .garden_type_link:last-child {
     border-left: 15px solid white;
     border-top: 30px solid white;
   }
 }
 
-.plant-button-box .plant_location_link:hover {
+.plant-button-box .plant_location_link:hover, .plant-button-box .garden_type_link:hover, .garden-types .plant_location_link:hover, .garden-types .garden_type_link:hover {
   background-color: #808080ab;
   background-blend-mode: multiply;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
 
-.plant-button-box h2 {
+.plant-button-box .garden_type_link:first-child, .garden-types .garden_type_link:first-child {
+  background-image: url("assets/img/dish.jpg");
+}
+
+.plant-button-box .garden_type_link:last-child, .garden-types .garden_type_link:last-child {
+  background-image: url("assets/img/vertical.jpg");
+}
+
+.plant-button-box h2, .garden-types h2 {
   text-transform: uppercase;
   font-family: 'Averia Serif Libre', cursive;
   color: white;

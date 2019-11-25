@@ -261,7 +261,7 @@ Author URI: www.vehiclemedia.com.
 }
 
 
-.plant-button-box{
+.plant-button-box, .garden-types{
     display: flex;
     width: 80%;
     margin: 0 auto;
@@ -270,7 +270,7 @@ Author URI: www.vehiclemedia.com.
     @include respond-to('large'){
         flex-direction: row;
     }
-    .plant_location_link{
+    .plant_location_link, .garden_type_link{
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -305,6 +305,14 @@ Author URI: www.vehiclemedia.com.
             background-color: #808080ab;
             background-blend-mode: multiply;
             transform: scale(0.9);
+        }
+    }
+    .garden_type_link{
+        &:first-child{
+             background-image: url('assets/img/dish.jpg');
+        }
+        &:last-child{
+             background-image: url('assets/img/vertical.jpg');
         }
     }
     h2{
