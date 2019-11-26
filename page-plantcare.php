@@ -3,6 +3,9 @@
 /*
 * Template Name: Plant Care
 */
+
+$page_id = 'plantcare';
+$page_title = 'Care'; 
 ?>
 
 <?php get_header();?>

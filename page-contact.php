@@ -3,6 +3,8 @@
 /*
 * Template Name: Contact
 */
+$page_id = 'contact';
+$page_title = 'Contact'; 
 ?>
 
 <?php get_header();?>
@@ -19,7 +21,19 @@
             <h1 class="text-center uppercase greentwo averia"><?php echo the_title();?></h1>
 
 
-            <?php
+            <div class="left-right-container">
+                <div class="left-contact">
+                    <?php echo the_post_thumbnail();?>
+                </div>
+                
+                
+                <div class="contact-right">
+                    <?php echo the_content();?>
+                </div>
+            </div>
+            
+
+            <?php 
         endwhile;
     endif;
     ?>

@@ -2,6 +2,9 @@
 /*
 * Template Name: Home Page
 */
+
+$page_id = 'homepage';
+$page_title = 'Home'; 
 ?>
 
 <?php get_header();?>

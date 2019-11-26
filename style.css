@@ -516,7 +516,9 @@ a {
 .single-pots,
 .page-template-page-plantcare,
 .single-plants,
-.single-gardens {
+.single-gardens,
+.term-vertical,
+.term-dish {
   background: #fff;
 }
 
@@ -781,25 +783,22 @@ a {
 
 .single-prev-next a {
   margin: 0 20px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   font-family: 'Averia Serif Libre', cursive;
   color: #b4d2be;
   border: 2px solid #b4d2be;
   background: #fff;
   padding: 10px 14px;
-  width: 130px;
+  width: 100%;
+  max-width: 150px;
   white-space: nowrap;
 }
 
 .single-prev-next a:first-child {
   text-align: right;
-}
-
-.single-prev-next a:first-child i {
-  margin-right: 22px;
-}
-
-.single-prev-next a:last-child i {
-  margin-left: 50px;
 }
 
 .illustration {
@@ -949,13 +948,13 @@ a {
 }
 
 @media screen and (max-width: 991px) {
-  .single-plant {
+  .single-plant, .single-garden {
     margin-top: 120px;
   }
-  .single-plant .plant-img {
+  .single-plant .plant-img, .single-garden .plant-img {
     width: 100%;
   }
-  .single-plant .plant-img img {
+  .single-plant .plant-img img, .single-garden .plant-img img {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -997,11 +996,11 @@ a {
   line-height: 1.9em;
 }
 
-.locations-page-container h1 {
+.locations-page-container h1, .garden-types-page-container h1 {
   padding: 80px 0;
 }
 
-.locations-page-container ul {
+.locations-page-container ul, .garden-types-page-container ul {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
@@ -1012,28 +1011,28 @@ a {
   flex-wrap: wrap;
 }
 
-.locations-page-container ul li {
+.locations-page-container ul li, .garden-types-page-container ul li {
   list-style: none;
   width: 25%;
   margin: 17px;
 }
 
-.locations-page-container ul li a {
+.locations-page-container ul li a, .garden-types-page-container ul li a {
   position: relative;
 }
 
-.locations-page-container ul li a title {
+.locations-page-container ul li a title, .garden-types-page-container ul li a title {
   display: none;
 }
 
-.locations-page-container ul li a img {
+.locations-page-container ul li a img, .garden-types-page-container ul li a img {
   width: 100%;
   height: auto;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
 
-.locations-page-container ul li a:hover title {
+.locations-page-container ul li a:hover title, .garden-types-page-container ul li a:hover title {
   display: -webkit-box;
   display: flex;
   position: absolute;
@@ -1043,7 +1042,7 @@ a {
           transform: translate(-50%, -50%);
 }
 
-.locations-page-container ul li a:hover img {
+.locations-page-container ul li a:hover img, .garden-types-page-container ul li a:hover img {
   border-radius: 20px;
 }
 
@@ -1095,10 +1094,70 @@ a {
   height: auto;
 }
 
-.garden-types-page-container h1 {
-  padding: 80px 0;
+.weddings-events a.book {
+  display: -webkit-box;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-bottom: 100px;
+  width: 120px;
+  color: #b4d2be;
+  border: 2px solid #b4d2be;
+  padding: 10px 14px;
+  font-size: 25px;
 }
 
 .contact-page h1 {
   padding: 80px 0;
+}
+
+.contact-page .left-right-container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.contact-page .left-right-container .left-contact img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contact-page .left-right-container .contact-right {
+  padding: 30px;
+  font-family: 'Averia Serif Libre', cursive;
+  color: #819688;
+}
+
+.contact-page .left-right-container .contact-right p {
+  margin-bottom: 30px;
+}
+
+.contact-page .left-right-container .contact-right a {
+  color: #819688;
+}
+
+.contact-page .left-right-container .contact-right a:hover {
+  color: #8f9294;
+}
+
+@media (min-width: 768px) {
+  .contact-page .left-right-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .contact-page .left-right-container .left-contact {
+    padding-right: 40px;
+  }
+  .contact-page .left-right-container .contact-right {
+    padding: 0;
+  }
 }

@@ -16,7 +16,7 @@
                 
                 <?php $terms = get_the_terms($post->ID, 'types');
                     foreach($terms as $term){
-                        echo $term->name . ' Garden';
+                        echo 'Garden Type: ' . $term->name;
                     } 
                 ?>
 
