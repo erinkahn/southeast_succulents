@@ -18,7 +18,7 @@ $page_title = 'Care';
         while (have_posts() ):
             the_post();
             ?>
-            <h1 class="text-center uppercase greentwo averia"><?php echo the_title();?></h1>
+            <h2 class="text-center uppercase greentwo averia"><?php echo the_title();?></h2>
             <p><?php the_content();?></p>
         <?php endwhile;
     endif;

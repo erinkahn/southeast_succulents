@@ -18,7 +18,7 @@ $page_title = 'Contact';
             the_post();
             ?>
             
-            <h1 class="text-center uppercase greentwo averia"><?php echo the_title();?></h1>
+            <h2 class="text-center uppercase greentwo averia"><?php echo the_title();?></h2>
 
 
             <div class="left-right-container">

@@ -56,7 +56,7 @@ if (have_posts()):
     </div>
     
     <div>
-        <h1>About</h1>
+        <h2>About</h2>
         <p><?php the_content();?></p>
     </div>
     

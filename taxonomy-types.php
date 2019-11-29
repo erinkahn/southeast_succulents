@@ -11,7 +11,7 @@
 
 <div class="garden-types-page-container">
 
-    <h1 class="text-center greentwo uppercase averia">All <?php echo single_cat_title();?>  Gardens</h1>
+    <h2 class="text-center greentwo uppercase averia">All <?php echo single_cat_title();?>  Gardens</h2>
 
     <?php echo category_description();?>
 

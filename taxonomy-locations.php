@@ -10,7 +10,7 @@
 
 <div class="locations-page-container">
 
-    <h1 class="text-center greentwo uppercase averia">All <?php echo single_cat_title();?>  Plants</h1>
+    <h2 class="text-center greentwo uppercase averia">All <?php echo single_cat_title();?>  Plants</h2>
 
     <ul>
     <?php

@@ -10,7 +10,7 @@
 
 <div class="weddings-events">
 
-    <h1 class="text-center uppercase greentwo averia">Weddings & Events</h1>
+    <h2 class="text-center uppercase greentwo averia">Weddings & Events</h2>
     <p class="averia greentwo text-center">Have an event coming up? Maybe you're getting married. See what we can offer to add some natural beauty to your special day.</p>
 
     <div class="event-pic">
