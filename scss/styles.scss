@@ -17,8 +17,8 @@ Author URI: www.vehiclemedia.com.
 .post-type-archive,
 .single-pots,
 .page-template-page-plantcare,
-.single-plants, 
-.single-gardens,
+// .single-plants, 
+// .single-gardens,
 .term-vertical,
 .term-dish{
     background: #fff;
@@ -207,7 +207,7 @@ Author URI: www.vehiclemedia.com.
     flex-direction: column;
     align-items: center;
     background: white;
-    border: 1px solid $grey;
+    border: 1px solid $green;
     @include respond-to('large'){
         flex-direction: row;
         width: 80%;
@@ -249,12 +249,12 @@ Author URI: www.vehiclemedia.com.
         display: flex;
         justify-content: space-between;
         font-family: 'Averia Serif Libre', cursive;
-        color: $green;
-        border: 2px solid $green;
+        color: $grey;
+        border: 1px solid $greentwo;
         background: #fff;
         padding: 10px 14px;
         width: 100%;
-       align-items: center;
+        align-items: center;
         max-width: 174px;
         white-space: nowrap;
         &:first-child{

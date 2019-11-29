@@ -527,8 +527,6 @@ a {
 .post-type-archive,
 .single-pots,
 .page-template-page-plantcare,
-.single-plants,
-.single-gardens,
 .term-vertical,
 .term-dish {
   background: #fff;
@@ -759,7 +757,7 @@ a {
   -webkit-box-align: center;
           align-items: center;
   background: white;
-  border: 1px solid #8f9294;
+  border: 1px solid #b4d2be;
 }
 
 @media (min-width: 992px) {
@@ -817,8 +815,8 @@ a {
   -webkit-box-pack: justify;
           justify-content: space-between;
   font-family: 'Averia Serif Libre', cursive;
-  color: #b4d2be;
-  border: 2px solid #b4d2be;
+  color: #8f9294;
+  border: 1px solid #9dbba9;
   background: #fff;
   padding: 10px 14px;
   width: 100%;
