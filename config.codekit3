@@ -152,7 +152,7 @@
 		"oAP": "/assets/img/indoor.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/assets/img/logo.png": {
@@ -215,7 +215,7 @@
 		"oAP": "/assets/img/outdoor.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/assets/img/vertical.jpg": {
