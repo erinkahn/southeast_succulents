@@ -13,6 +13,8 @@
 
     <h1 class="text-center greentwo uppercase averia">All <?php echo single_cat_title();?>  Gardens</h1>
 
+    <?php echo category_description();?>
+
     <ul>
     <?php
     if (have_posts()):

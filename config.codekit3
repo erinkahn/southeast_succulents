@@ -33,20 +33,20 @@
 		"oAP": "/archive-gardens.php",
 		"oF": 0
 		},
+	"/archive-hypertufas.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/archive-hypertufas.php",
+		"oF": 0
+		},
 	"/archive-plants.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/archive-plants.php",
-		"oF": 0
-		},
-	"/archive-pots.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/archive-pots.php",
 		"oF": 0
 		},
 	"/archive-slider.php": {
@@ -595,20 +595,20 @@
 		"oAP": "/single-gardens.php",
 		"oF": 0
 		},
+	"/single-hypertufas.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-hypertufas.php",
+		"oF": 0
+		},
 	"/single-plants.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/single-plants.php",
-		"oF": 0
-		},
-	"/single-pots.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/single-pots.php",
 		"oF": 0
 		},
 	"/single-slider.php": {

@@ -57,6 +57,16 @@ header{
     }
 } 
 
+.menu-main-menu-left-container{
+    
+    @include respond-to('large'){
+        margin-left: -0px;
+    }
+    @include respond-to('large'){
+        margin-left: -38px;
+    }
+}
+
 
 header .current-menu-item a{
     color: $greentwo!important;

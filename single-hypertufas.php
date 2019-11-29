@@ -13,8 +13,8 @@
             <div class="pot-description">
                 <h2><?php echo the_title();?></h2>
                 <?php echo the_content(); ?>
-                <p><b>Price: </b>$<?php echo the_field('pot_price');?></p>
-                <p><b>Size:</b> <?php echo the_field('pot_size');?></p>
+                <p><b>Price: </b>$<?php echo the_field('hypertufa_price');?></p>
+                <p><b>Size:</b> <?php echo the_field('hypertufa_size');?></p>
             </div>
             
             <?php
@@ -26,8 +26,8 @@
 
 
 <div class="single-prev-next">
-    <?php previous_post_link( '%link', ' <i class="fas fa-chevron-left" aria-hidden="true"></i> Previous Pot', FALSE ); ?> 
-    <?php next_post_link( '%link', 'Next Pot <i class="fas fa-chevron-right" aria-hidden="true"></i>', FALSE ); ?> 
+    <?php previous_post_link( '%link', ' <i class="fas fa-chevron-left" aria-hidden="true"></i> Previous Hypertufa', FALSE ); ?> 
+    <?php next_post_link( '%link', 'Next Hypertufa <i class="fas fa-chevron-right" aria-hidden="true"></i>', FALSE ); ?> 
 </div>
 
 

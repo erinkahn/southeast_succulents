@@ -268,19 +268,19 @@ add_action( 'init', 'plants', 0 );
 
 
 // Register Custom Post Type
-function pots() {
+function Hypertufas() {
 
 	$labels = array(
-		'name'                  => _x( 'Pots', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'Pot', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Pots', 'text_domain' ),
-		'name_admin_bar'        => __( 'Pots', 'text_domain' ),
+		'name'                  => _x( 'Hypertufas', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Hypertufa', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Hypertufas', 'text_domain' ),
+		'name_admin_bar'        => __( 'Hypertufas', 'text_domain' ),
 		'archives'              => __( 'Item Archives', 'text_domain' ),
 		'attributes'            => __( 'Item Attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
 		'all_items'             => __( 'All Items', 'text_domain' ),
 		'add_new_item'          => __( 'Add New Item', 'text_domain' ),
-		'add_new'               => __( 'Add New Pot', 'text_domain' ),
+		'add_new'               => __( 'Add New Hypertufa', 'text_domain' ),
 		'new_item'              => __( 'New Item', 'text_domain' ),
 		'edit_item'             => __( 'Edit Item', 'text_domain' ),
 		'update_item'           => __( 'Update Item', 'text_domain' ),
@@ -300,14 +300,14 @@ function pots() {
 		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
 	);
 	$rewrite = array(
-		'slug'                  => 'pots',
+		'slug'                  => 'Hypertufas',
 		'with_front'            => true,
 		'pages'                 => true,
 		'feeds'                 => true,
 	);
 	$args = array(
-		'label'                 => __( 'Pot', 'text_domain' ),
-		'description'           => __( 'Pots', 'text_domain' ),
+		'label'                 => __( 'Hypertufa', 'text_domain' ),
+		'description'           => __( 'Hypertufas', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail'), // need this for thumbnail img
 		'taxonomies'            => array(),
@@ -325,10 +325,10 @@ function pots() {
 		'rewrite'               => $rewrite,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'pots', $args );
+	register_post_type( 'Hypertufas', $args );
 
 }
-add_action( 'init', 'pots', 0 );
+add_action( 'init', 'Hypertufas', 0 );
 
 
 
