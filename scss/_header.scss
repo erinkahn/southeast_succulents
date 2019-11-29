@@ -134,7 +134,7 @@ header .current-menu-item a{
         top: 92px;
         left: 0;
         right: 0;
-        position: absolute;
+        position: fixed;
         pointer-events: all;
         transition: 1s ease-in-out;
         @media screen and (min-width:692px){

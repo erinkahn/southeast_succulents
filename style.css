@@ -271,7 +271,7 @@ header .current-menu-item a {
   top: 92px;
   left: 0;
   right: 0;
-  position: absolute;
+  position: fixed;
   pointer-events: all;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
@@ -523,18 +523,25 @@ a {
 }
 
 #content {
-  margin-top: 27px;
+  margin-top: 108px;
 }
 
 @media (min-width: 768px) {
   #content {
-    margin-top: 90px;
+    margin-top: 165px;
   }
 }
 
 .slider-container {
   height: 630px;
   position: relative;
+  margin-top: -62px;
+}
+
+@media (min-width: 768px) {
+  .slider-container {
+    margin-top: -75px;
+  }
 }
 
 .slider-container .slider {
@@ -917,8 +924,14 @@ a {
 }
 
 .all-plants ul li, .all-gardens ul li {
-  width: 30.333%;
+  width: 100%;
   margin: 10px;
+}
+
+@media (min-width: 992px) {
+  .all-plants ul li, .all-gardens ul li {
+    width: 30.333%;
+  }
 }
 
 .all-plants ul li a, .all-gardens ul li a {
