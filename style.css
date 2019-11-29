@@ -560,6 +560,8 @@ a {
   background-repeat: no-repeat;
   background-position: right;
   height: 645px;
+  background-color: #00000057;
+  background-blend-mode: multiply;
 }
 
 .slider-container .slider span {
@@ -598,6 +600,10 @@ a {
   padding: 10px 14px;
   box-shadow: -3px 0px 6px #454545;
   background: rgba(0, 0, 0, 0.365);
+}
+
+.slider-container .slider span a:hover {
+  background: rgba(0, 0, 0, 0.465);
 }
 
 .slick-dots {
@@ -1146,7 +1152,11 @@ a {
   transition: 1s ease-in-out;
   display: block;
   width: 100%;
-  height: auto;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .weddings-events a.book {

@@ -51,6 +51,8 @@ Author URI: www.vehiclemedia.com.
         background-repeat: no-repeat;
         background-position: right;
         height: 645px;
+        background-color: #00000057;
+        background-blend-mode: multiply;
 
        span{
             width: 60%;
@@ -79,6 +81,9 @@ Author URI: www.vehiclemedia.com.
                 padding: 10px 14px;
                 box-shadow: -3px 0px 6px #454545;
                 background: rgba(0, 0, 0, 0.365);
+                &:hover{
+                    background: rgba(0, 0, 0, 0.465);
+                }
             }
         }
     }
@@ -518,7 +523,9 @@ Author URI: www.vehiclemedia.com.
                     transition: 1s ease-in-out;
                     display: block;
                     width: 100%;
-                    height: auto;
+                    height: 300px;
+                    object-fit: cover;
+                    object-position: center;
                 }
             }
         }
