@@ -1011,8 +1011,8 @@ a {
 .plant-button-box .plant_location_link:hover, .plant-button-box .garden_type_link:hover, .garden-types .plant_location_link:hover, .garden-types .garden_type_link:hover {
   background-color: #808080ab;
   background-blend-mode: multiply;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .plant-button-box .garden_type_link:first-child, .garden-types .garden_type_link:first-child {
@@ -1070,21 +1070,19 @@ a {
 .all-plants ul li a img, .all-gardens ul li a img {
   height: auto;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   -webkit-transition: 1s ease;
   transition: 1s ease;
 }
 
 @media (min-width: 1200px) {
   .all-plants ul li a img, .all-gardens ul li a img {
-    height: 335px;
+    height: 300px;
   }
 }
 
 .all-plants ul li a img:hover, .all-gardens ul li a img:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .all-plants h2, .all-gardens h2 {
@@ -1233,8 +1231,8 @@ a {
 }
 
 .weddings-events .event-pic ul li:hover img {
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media (min-width: 768px) {
@@ -1347,6 +1345,6 @@ a {
 }
 
 .plantcare-container .wp-block-image img {
-  width: 100%;
+  width: auto;
   height: 60px;
 }
