@@ -267,7 +267,7 @@ header .current-menu-item a {
   height: 0;
   pointer-events: none;
   position: absolute;
-  background: #9dbba9;
+  background: #b4d2be;
   left: 0;
   right: 0;
   top: 0;
@@ -287,6 +287,7 @@ header .current-menu-item a {
   pointer-events: all;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
+  border-bottom: 2px solid #9dbba9;
 }
 
 @media screen and (min-width: 692px) {
@@ -393,6 +394,7 @@ footer .left-side {
 footer .social-icons {
   display: -webkit-box;
   display: flex;
+  margin-top: 20px;
 }
 
 footer .social-icons i {
@@ -791,8 +793,8 @@ a {
 }
 
 .pots-container a img {
-  width: 100%;
-  height: auto;
+  width: 180px;
+  height: 100%;
   -webkit-transition: 1s ease;
   transition: 1s ease;
 }
@@ -812,8 +814,8 @@ a {
 }
 
 .pots-container a:hover img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .single-pot, .single-plant, .single-garden {
@@ -901,10 +903,6 @@ a {
 }
 
 .illustration {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
   margin: 0px auto;
   margin-top: 100px;
   width: 200px;
@@ -1013,8 +1011,8 @@ a {
 .plant-button-box .plant_location_link:hover, .plant-button-box .garden_type_link:hover, .garden-types .plant_location_link:hover, .garden-types .garden_type_link:hover {
   background-color: #808080ab;
   background-blend-mode: multiply;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .plant-button-box .garden_type_link:first-child, .garden-types .garden_type_link:first-child {
@@ -1085,8 +1083,8 @@ a {
 }
 
 .all-plants ul li a img:hover, .all-gardens ul li a img:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .all-plants h2, .all-gardens h2 {
@@ -1116,8 +1114,8 @@ a {
 }
 
 .all-gardens ul li a img:hover {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(0.88);
+          transform: scale(0.88);
 }
 
 .plantcare-container {
@@ -1131,7 +1129,7 @@ a {
           flex-direction: column;
   -webkit-box-pack: center;
           justify-content: center;
-  max-width: 900px;
+  max-width: 720px;
 }
 
 .plantcare-container h2 {
@@ -1188,14 +1186,6 @@ a {
   }
 }
 
-.locations-page-container ul li a, .garden-types-page-container ul li a {
-  position: relative;
-}
-
-.locations-page-container ul li a title, .garden-types-page-container ul li a title {
-  display: none;
-}
-
 .locations-page-container ul li a img, .garden-types-page-container ul li a img {
   width: 100%;
   height: auto;
@@ -1203,18 +1193,8 @@ a {
   transition: .3s ease;
 }
 
-.locations-page-container ul li a:hover title, .garden-types-page-container ul li a:hover title {
-  display: -webkit-box;
-  display: flex;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.locations-page-container ul li a:hover img, .garden-types-page-container ul li a:hover img {
-  border-radius: 20px;
+.locations-page-container ul li a:hover .text-center, .garden-types-page-container ul li a:hover .text-center {
+  color: #b4d2be;
 }
 
 .weddings-events h2 {
@@ -1360,4 +1340,13 @@ a {
   .contact-page .left-right-container .contact-right {
     padding: 0;
   }
+}
+
+.plantcare-container .wp-block-image {
+  margin: 0 auto;
+}
+
+.plantcare-container .wp-block-image img {
+  width: 100%;
+  height: 60px;
 }

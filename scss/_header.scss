@@ -131,7 +131,7 @@ header .current-menu-item a{
     height: 0;
     pointer-events: none;
     position: absolute;
-    background: $greentwo;
+    background: $green;
     left: 0;
     right: 0;
     top: 0;
@@ -147,6 +147,7 @@ header .current-menu-item a{
         position: fixed;
         pointer-events: all;
         transition: 1s ease-in-out;
+        border-bottom: 2px solid $greentwo;
         @media screen and (min-width:692px){
             top: 122px;
         }
