@@ -1,10 +1,10 @@
 /*
-Theme Name: Vehicle Media
-Theme URI: .vehicle44.com
-Description: Website by Vehicle Media.
+Theme Name: Southeast Succulents
+Theme URI: 
+Description: Website by Erin Kahn
 Version: 1.0
-Author: Vehicle Media
-Author URI: www.vehiclemedia.com.
+Author: Erin Kahn
+Author URI: erin-kahn.com
 */
 @import url(@fortawesome/fontawesome-free/css/fontawesome.css);
 @import url(@fortawesome/fontawesome-free/css/all.css);
@@ -1193,6 +1193,10 @@ a {
 
 .locations-page-container ul li a:hover .text-center, .garden-types-page-container ul li a:hover .text-center {
   color: #b4d2be;
+}
+
+.locations-page-container ul li a:hover img, .garden-types-page-container ul li a:hover img {
+  opacity: 0.8;
 }
 
 .weddings-events h2 {
